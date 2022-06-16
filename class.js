@@ -45,8 +45,7 @@ const copiaPersonajes = [...personajes];
 // console.log(nombrePersonajes)
 
 const personajesProcesados = personajes.map(personaje => {
-    return `<p>${personaje}<p/>` /* COMILLAS SIMPLES alt gr + } */
-     
+    return `<p>${personaje}<p/>` /* COMILLAS SIMPLES alt gr + } o alt 96*/
 })
 
 //console.log(personajesProcesados);
