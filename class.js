@@ -32,3 +32,25 @@ const personal2 = {
 //console.log(personal2);
 
 const copiaPersonajes = [...personajes];
+
+//Función map
+// const personajesProcesados = [
+//     {nombre: "Superman", nombreReal: "Calark Kent"},
+//     {nombre: "Batman", nombreReal: "Bruce Wayne"},
+//     {nombre: "Superchica", nombreReal: "Linda Lee"},
+//     {nombre: "Spiderman", nombreReal: "Peter Parker"},
+//     {nombre: "Thor", nombreReal: "Thor Odinson"}, 
+// ]
+// const nombrePersonajes = personajesProcesados.map((el)=>el.nombreReal)
+// console.log(nombrePersonajes)
+
+const personajesProcesados = personajes.map(personaje => {
+    return `<p>${personaje}<p/>` /* COMILLAS SIMPLES alt gr + } */
+     
+})
+
+//console.log(personajesProcesados);
+
+//Función find
+const personajeEncontrado = personajes.find(personaje => personaje === "superchica");
+console.log(personajeEncontrado);
