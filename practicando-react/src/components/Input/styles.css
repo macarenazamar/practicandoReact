@@ -1,0 +1,10 @@
+.app-input{
+    padding: 10px;
+    width: 25vh;
+    text-align: center;
+    color: white;
+    background-color: rgb(34, 87, 87);
+    border-radius: 15px;
+    border-width: 3px;
+    border-color: black;
+}
