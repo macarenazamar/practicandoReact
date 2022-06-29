@@ -1,8 +1,9 @@
 import React from 'react'
+import { useEffect } from 'react';
 import { useState } from 'react'
 
 const ItemListContainer = ({greeting}) => {
-
+  
   const [color, setColor] = useState ("blue");
   
   const cambiarColor = () => {
@@ -13,12 +14,37 @@ const ItemListContainer = ({greeting}) => {
   
   const [cont, setCont] = useState (0);
   
+  //agregamos un stock
+  const stock = 10;
+  
   const handleClick = () => {
-    setCont(cont + 1);
+    //agragamos un stock
+    if (cont < stock) {
+      setCont(cont + 1);
+    } else {
+      alert("No hay mas stock")
+    }
   }
   
   const fecha = new Date().toLocaleString();
   
+//Ciclos de vida
+//Montaje:
+useEffect(() =>{
+  console.log("Se montó/actualizó el componente")
+  }, [color])
+
+useEffect(() =>{
+  //Se desmonta el componente
+  return () => {
+    console.log("Se está desmontando el ItemListContaier")
+  }
+}, [])
+
+useEffect(() =>{
+  console.log("Se ejecuta siempre que se actualice cualquier estado")
+})
+
   return (
     <div>
       <div style={{backgroundColor:color}}>
