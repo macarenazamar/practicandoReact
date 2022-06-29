@@ -48,7 +48,7 @@ const personajesProcesados = personajes.map(personaje => {
     return `<p>${personaje}<p/>` /* COMILLAS SIMPLES alt gr + } o alt 96*/
 })
 
-//console.log(personajesProcesados);
+console.log(personajesProcesados);
 
 //Función find
 const personajeEncontrado = personajes.find(personaje => personaje === "superchica");
